@@ -9,14 +9,15 @@ The goal is to identify which production lines have the highest number of defect
 - Identify production lines with higher quality issues
 - Provide a foundation for deeper analysis such as root cause investigation
 
-## Dataset
-- Mock quality control data created for learning purposes
-- Each record represents a QC check result for a product
-- Fields include:
-  - production_line
-  - product_type
-  - result (Pass / Fail)
-  - checked_at (timestamp)
+## Analysis Result
+The following table shows the final count of defects categorized by each production line, as derived from the SQL analysis:
+
+| production_line | total_defects |
+| :--- | :--- |
+| Line-A | 4 |
+| Line-B | 2 |
+
+*Note: The results indicate that Line-A has a higher defect frequency, suggesting a priority area for quality improvement.*
 
 ## SQL Concepts Used
 - CREATE TABLE
@@ -24,9 +25,6 @@ The goal is to identify which production lines have the highest number of defect
 - WHERE filtering
 - GROUP BY aggregation
 - COUNT()
-
-## Key Query
-The main analysis groups failed QC records by production line to calculate total defects per line.
 
 ## Insight
 This analysis highlights which production lines experience more defects.
